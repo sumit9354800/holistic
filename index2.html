@@ -1,0 +1,1342 @@
+<!doctype html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width,initial-scale=1,viewport-fit=cover"
+    />
+    <title>Holistic Healing Services</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              bg: "#f4f8f8",
+              surface: "#ffffff",
+              fg: "#10282a",
+              muted: "#557072",
+              line: "#d6e3e3",
+              brand: "#0b6b66",
+              "brand-ink": "#ffffff",
+              "brand-soft": "#dff0ee",
+              accent: "#d4430f",
+              "accent-soft": "#fde9e1",
+              tile: "#e4f1ef",
+              "hero-a": "#0a4a46",
+              "hero-b": "#13867d",
+              ok: "#13795b",
+            },
+            fontFamily: {
+              display: ['"Outfit"', '"Segoe UI"', "system-ui", "sans-serif"],
+              body: ['"Inter"', '"Segoe UI"', "system-ui", "sans-serif"],
+            },
+            boxShadow: {
+              soft: "0 6px 24px rgba(16, 40, 42, 0.08)",
+            },
+          },
+        },
+      };
+    </script>
+    <style>
+      :root {
+        color-scheme: light;
+      }
+      [hidden]:not([hidden="until-found" i]) {
+        display: none !important;
+      }
+      @media (prefers-reduced-motion: no-preference) {
+        .slide.on {
+          animation: fade 0.5s ease;
+        }
+        @keyframes fade {
+          from {
+            opacity: 0.2;
+          }
+          to {
+            opacity: 1;
+          }
+        }
+      }
+    </style>
+  </head>
+  <body
+    class="bg-bg text-fg font-body text-[15px] leading-normal px-4 m-0 antialiased selection:bg-brand-soft selection:text-brand"
+  >
+    <!-- Sticky Header -->
+    <header
+      class="sticky top-0 z-50 bg-surface border-b border-line -mx-4 px-4"
+    >
+      <div
+        class="max-w-[1120px] mx-auto flex flex-wrap items-center gap-3 md:gap-4 py-3"
+      >
+        <a
+          class="flex items-center gap-2.5 no-underline min-w-0"
+          href="#home"
+          aria-label="Holistic Healing Services home"
+        >
+          <svg viewBox="0 0 40 40" class="w-10 h-10 shrink-0" aria-hidden="true">
+            <rect width="40" height="40" rx="12" fill="#0b6b66" />
+            <path
+              d="M20 31c-7-3-10-8-9-15 6 0 10 2 12 6 1-4 4-6 8-6 0 7-3 13-11 15z"
+              fill="#ffffff"
+              opacity=".95"
+            />
+            <path
+              d="M20 12v10M15 17h10"
+              stroke="#0b6b66"
+              stroke-width="2.6"
+              stroke-linecap="round"
+            />
+          </svg>
+          <span>
+            <b class="font-display text-[1.1rem] leading-[1.1] block text-fg"
+              >Holistic Healing</b
+            >
+            <small
+              class="text-muted text-[0.72rem] tracking-[0.06em] uppercase block"
+              >Services</small
+            >
+          </span>
+        </a>
+
+        <form
+          class="flex-1 basis-[280px] min-w-0 flex items-center gap-2.5 border-[1.5px] border-line focus-within:border-brand rounded-full px-4 py-0.5 bg-bg order-3 md:order-none"
+          id="searchForm"
+          role="search"
+          autocomplete="off"
+        >
+          <svg
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2.4"
+            stroke-linecap="round"
+            class="w-5 h-5 shrink-0 text-accent"
+            aria-hidden="true"
+          >
+            <circle cx="11" cy="11" r="7" />
+            <path d="M20 20l-4-4" />
+          </svg>
+          <input
+            id="q"
+            type="search"
+            placeholder="Search ostomy bag, gauze, paracetamol"
+            aria-label="Search products"
+            class="flex-1 min-w-0 border-0 bg-transparent text-fg font-inherit py-2.5 outline-none"
+          />
+        </form>
+
+        <div class="flex gap-2 ml-auto md:ml-0">
+          <a
+            class="rounded-full px-5 py-2.5 font-semibold bg-[#111b1c] text-white inline-flex items-center gap-2 no-underline hover:opacity-90 transition"
+            href="#categories"
+            >Categories</a
+          >
+          <button
+            class="relative rounded-full px-5 py-2.5 font-semibold bg-brand text-brand-ink inline-flex items-center gap-2 border-0 cursor-pointer hover:opacity-95 transition"
+            id="openCart"
+            aria-label="Open cart"
+          >
+            Cart
+            <span
+              class="bg-accent text-white rounded-full min-w-[1.35rem] h-[1.35rem] text-xs grid place-items-center px-1.5"
+              id="cartCount"
+              >0</span
+            >
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <main class="max-w-[1120px] mx-auto" id="home">
+      <!-- Quick Actions -->
+      <div class="grid grid-cols-2 gap-3 pt-5">
+        <button
+          class="bg-surface border border-line hover:border-brand rounded-2xl p-4 text-left text-fg flex flex-col-reverse sm:flex-row justify-between items-start sm:items-center gap-2 min-w-0 transition cursor-pointer"
+          id="openRx"
+        >
+          <div>
+            <strong
+              class="font-display text-[1.15rem] leading-[1.2] block text-fg"
+              >Order with prescription</strong
+            >
+            <span class="block text-muted text-[0.85rem] mt-1"
+              >Upload and we confirm by call</span
+            >
+          </div>
+          <svg viewBox="0 0 56 56" class="w-14 h-14 shrink-0" aria-hidden="true">
+            <rect x="10" y="8" width="30" height="38" rx="5" fill="#3b95e0" />
+            <rect x="18" y="4" width="14" height="8" rx="3" fill="#2a74b8" />
+            <text
+              x="17"
+              y="34"
+              font-size="18"
+              font-weight="700"
+              fill="#fff"
+              font-family="serif"
+            >
+              Rx
+            </text>
+            <rect x="30" y="30" width="18" height="20" rx="4" fill="#2a74b8" />
+            <path
+              d="M39 35v10M34 40h10"
+              stroke="#fff"
+              stroke-width="2.4"
+              stroke-linecap="round"
+            />
+          </svg>
+        </button>
+
+        <button
+          class="bg-surface border border-line hover:border-brand rounded-2xl p-4 text-left text-fg flex flex-col-reverse sm:flex-row justify-between items-start sm:items-center gap-2 min-w-0 transition cursor-pointer"
+          id="openCall"
+        >
+          <div>
+            <strong
+              class="font-display text-[1.15rem] leading-[1.2] block text-fg"
+              >Call to order medicines</strong
+            >
+            <span class="block text-muted text-[0.85rem] mt-1"
+              >Tell us what you need</span
+            >
+          </div>
+          <svg viewBox="0 0 56 56" class="w-14 h-14 shrink-0" aria-hidden="true">
+            <rect x="26" y="8" width="24" height="34" rx="6" fill="#2fa56b" />
+            <rect x="30" y="3" width="16" height="8" rx="3" fill="#1f7f50" />
+            <path
+              d="M38 20v14M31 27h14"
+              stroke="#fff"
+              stroke-width="3"
+              stroke-linecap="round"
+            />
+            <path
+              d="M14 22c-2 8 4 20 16 24l4-6-6-4-3 2c-3-2-5-5-6-8l3-2-3-7z"
+              fill="#1f7f50"
+            />
+          </svg>
+        </button>
+      </div>
+
+      <!-- Hero Banner -->
+      <section class="pt-5 pb-8">
+        <div
+          class="relative rounded-[20px] overflow-hidden text-white bg-gradient-to-br from-hero-a to-hero-b min-h-[260px]"
+          id="hero"
+          aria-roledescription="carousel"
+        ></div>
+      </section>
+
+      <!-- Categories -->
+      <section id="categories" class="py-8">
+        <div
+          class="flex justify-between items-end gap-4 mb-4 flex-wrap"
+        >
+          <div>
+            <h2 class="font-display text-2xl leading-[1.15] m-0">
+              Shop by category
+            </h2>
+            <p class="mt-1 mb-0 text-muted">
+              Medicines, dressings and ostomy care in one place.
+            </p>
+          </div>
+        </div>
+        <div
+          class="grid grid-cols-[repeat(auto-fill,minmax(140px,1fr))] gap-3"
+          id="cats"
+        ></div>
+      </section>
+
+      <!-- Products -->
+      <section id="products" class="py-8">
+        <div
+          class="flex justify-between items-end gap-4 mb-4 flex-wrap"
+        >
+          <div>
+            <h2
+              id="prodTitle"
+              class="font-display text-2xl leading-[1.15] m-0"
+            >
+              Products
+            </h2>
+            <p id="prodCount" class="mt-1 mb-0 text-muted"></p>
+          </div>
+        </div>
+        <div
+          class="flex gap-2 overflow-x-auto pb-2 mb-3 no-scrollbar"
+          id="chips"
+        ></div>
+        <div
+          class="grid grid-cols-[repeat(auto-fill,minmax(200px,1fr))] gap-4"
+          id="grid"
+        ></div>
+      </section>
+
+      <!-- About -->
+      <section id="about" class="py-8">
+        <div
+          class="grid grid-cols-1 md:grid-cols-[1.3fr_1fr] gap-8 items-start"
+        >
+          <div>
+            <h2 class="font-display text-[1.8rem] leading-[1.15] mb-3">
+              About Holistic Healing Services
+            </h2>
+            <p class="mt-0 mb-3 max-w-[62ch]">
+              Holistic Healing Services has been in business since 2021. We work
+              in trading of retail and medicine and surgical dressings like
+              ostomy care.
+            </p>
+            <p class="mt-0 mb-4 max-w-[62ch]">
+              Patients, caregivers, clinics and families come to us for everyday
+              medicines, wound and surgical dressings, and ostomy supplies. We
+              keep the range practical, the pricing clear and the service
+              personal.
+            </p>
+            <a
+              class="rounded-full px-5 py-2.5 font-semibold bg-brand text-brand-ink inline-flex items-center gap-2 no-underline hover:opacity-95 transition"
+              href="#products"
+              >Browse products</a
+            >
+          </div>
+          <div class="grid gap-3">
+            <div
+              class="bg-surface border border-line rounded-2xl px-4.5 py-4 flex gap-4 items-center"
+            >
+              <b
+                class="font-display text-[1.7rem] text-brand min-w-[4.2rem] tabular-nums"
+                >2021</b
+              >
+              <span class="text-muted text-[0.92rem]"
+                >Serving customers since</span
+              >
+            </div>
+            <div
+              class="bg-surface border border-line rounded-2xl px-4.5 py-4 flex gap-4 items-center"
+            >
+              <b
+                class="font-display text-[1.7rem] text-brand min-w-[4.2rem] tabular-nums"
+                >Retail</b
+              >
+              <span class="text-muted text-[0.92rem]"
+                >Everyday medicines and health products</span
+              >
+            </div>
+            <div
+              class="bg-surface border border-line rounded-2xl px-4.5 py-4 flex gap-4 items-center"
+            >
+              <b
+                class="font-display text-[1.7rem] text-brand min-w-[4.2rem] tabular-nums"
+                >Surgical</b
+              >
+              <span class="text-muted text-[0.92rem]"
+                >Dressings, wound care and ostomy care supplies</span
+              >
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="bg-brand-soft rounded-[20px] p-6 mt-6 grid grid-cols-[repeat(auto-fit,minmax(200px,1fr))] gap-4"
+        >
+          <div>
+            <h3 class="font-display text-base leading-[1.15] mb-1">
+              Genuine products
+            </h3>
+            <p class="m-0 text-muted text-[0.9rem]">
+              Sourced from authorised distributors and sold with proper billing.
+            </p>
+          </div>
+          <div>
+            <h3 class="font-display text-base leading-[1.15] mb-1">
+              Ostomy care support
+            </h3>
+            <p class="m-0 text-muted text-[0.9rem]">
+              Pouches, barrier rings, paste and skin care for daily ostomy
+              routines.
+            </p>
+          </div>
+          <div>
+            <h3 class="font-display text-base leading-[1.15] mb-1">
+              Order your way
+            </h3>
+            <p class="m-0 text-muted text-[0.9rem]">
+              Order online, upload a prescription or simply call us.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Contact -->
+      <section id="contact" class="py-8">
+        <div
+          class="flex justify-between items-end gap-4 mb-4 flex-wrap"
+        >
+          <div>
+            <h2 class="font-display text-2xl leading-[1.15] m-0">
+              Contact us
+            </h2>
+            <p class="mt-1 mb-0 text-muted">
+              Call us to order, or ask about bulk supply for clinics.
+            </p>
+          </div>
+        </div>
+        <div
+          class="grid grid-cols-[repeat(auto-fit,minmax(240px,1fr))] gap-4"
+        >
+          <div class="bg-surface border border-line rounded-2xl p-4.5">
+            <small
+              class="text-muted uppercase tracking-[0.07em] text-[0.72rem] block"
+              >Phone</small
+            >
+            <div
+              class="font-display text-[1.3rem] mt-1 mb-2.5 break-words select-all"
+            >
+              7290909697
+            </div>
+            <div class="flex flex-wrap gap-2">
+              <a
+                class="rounded-full px-5 py-2.5 font-semibold bg-brand text-brand-ink inline-flex items-center gap-2 no-underline hover:opacity-95 transition"
+                href="tel:7290909697"
+                >Call now</a
+              >
+              <button
+                class="rounded-full px-5 py-2.5 font-semibold bg-transparent text-brand border-[1.5px] border-brand inline-flex items-center gap-2 cursor-pointer hover:bg-brand-soft/40 transition"
+                data-copy="7290909697"
+              >
+                Copy number
+              </button>
+            </div>
+          </div>
+
+          <div class="bg-surface border border-line rounded-2xl p-4.5">
+            <small
+              class="text-muted uppercase tracking-[0.07em] text-[0.72rem] block"
+              >Email</small
+            >
+            <div
+              class="font-display text-[1.3rem] mt-1 mb-2.5 break-words select-all"
+            >
+              info@yourdomain.com
+            </div>
+            <button
+              class="rounded-full px-5 py-2.5 font-semibold bg-transparent text-brand border-[1.5px] border-brand inline-flex items-center gap-2 cursor-pointer hover:bg-brand-soft/40 transition"
+              data-copy="info@yourdomain.com"
+            >
+              Copy email
+            </button>
+            <p class="text-[0.78rem] text-muted mt-2 mb-0">
+              Replace with your business email once the domain is ready.
+            </p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer
+      class="border-t border-line pt-6 pb-10 text-muted text-[0.85rem] mx-auto max-w-[1120px]"
+    >
+      <div>© 2021 to 2026 Holistic Healing Services. All rights reserved.</div>
+      <div>
+        Read each label before use. If symptoms persist, consult a doctor. This
+        is a demo website: products, prices and orders are samples.
+      </div>
+    </footer>
+
+    <div id="layer"></div>
+    <div
+      id="toast"
+      class="fixed left-1/2 -translate-x-1/2 bottom-4 bg-[#111b1c] text-white px-4 py-2.5 rounded-full z-[90] text-[0.9rem] max-w-[calc(100%-32px)] shadow-lg"
+      hidden
+    ></div>
+
+    <script>
+      /* ---------- Real Medical & Healthcare Photography (Unsplash High-Res) ---------- */
+      var IMG = {
+        ostomy: "https://images.unsplash.com/photo-1579684385127-1ef15d508118?auto=format&fit=crop&w=500&q=80",
+        tube: "https://images.unsplash.com/photo-1556228578-8c89e6adf883?auto=format&fit=crop&w=500&q=80",
+        ring: "https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?auto=format&fit=crop&w=500&q=80",
+        box: "https://images.unsplash.com/photo-1607619056574-7b8d3ee536b2?auto=format&fit=crop&w=500&q=80",
+        gauze: "https://images.unsplash.com/photo-1583947215259-38e31be8751f?auto=format&fit=crop&w=500&q=80",
+        dressing: "https://images.unsplash.com/photo-1603398938378-e54eab446dde?auto=format&fit=crop&w=500&q=80",
+        film: "https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&w=500&q=80",
+        roll: "https://images.unsplash.com/photo-1583947581924-860bda6a26df?auto=format&fit=crop&w=500&q=80",
+        tape: "https://images.unsplash.com/photo-1584017911766-d451b3d0e843?auto=format&fit=crop&w=500&q=80",
+        bottle: "https://images.unsplash.com/photo-1587854692152-cbe660dbde88?auto=format&fit=crop&w=500&q=80",
+        strip: "https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?auto=format&fit=crop&w=500&q=80",
+        sachet: "https://images.unsplash.com/photo-1628771065518-0d82f1938462?auto=format&fit=crop&w=500&q=80",
+        spray: "https://images.unsplash.com/photo-1620916566398-39f1143ab7be?auto=format&fit=crop&w=500&q=80",
+        meter: "https://images.unsplash.com/photo-1579154204601-01588f351e67?auto=format&fit=crop&w=500&q=80",
+        bp: "https://images.unsplash.com/photo-1631815588090-d4bfec5b1ccb?auto=format&fit=crop&w=500&q=80",
+        thermo: "https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?auto=format&fit=crop&w=500&q=80",
+        brace: "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?auto=format&fit=crop&w=500&q=80",
+        diaper: "https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?auto=format&fit=crop&w=500&q=80",
+        jar: "https://images.unsplash.com/photo-1550572017-edd951aa8f72?auto=format&fit=crop&w=500&q=80",
+        mask: "https://images.unsplash.com/photo-1584634731339-252c581abfc5?auto=format&fit=crop&w=500&q=80"
+      };
+
+      /* Specific product-accurate real images */
+      var PROD_IMG = {
+        1: "https://images.unsplash.com/photo-1579684385127-1ef15d508118?auto=format&fit=crop&w=500&q=80",
+        2: "https://images.unsplash.com/photo-1583947215259-38e31be8751f?auto=format&fit=crop&w=500&q=80",
+        3: "https://images.unsplash.com/photo-1556228578-8c89e6adf883?auto=format&fit=crop&w=500&q=80",
+        4: "https://images.unsplash.com/photo-1603398938378-e54eab446dde?auto=format&fit=crop&w=500&q=80",
+        5: "https://images.unsplash.com/photo-1584483766114-2cea6facdf57?auto=format&fit=crop&w=500&q=80",
+        6: "https://images.unsplash.com/photo-1583947215259-38e31be8751f?auto=format&fit=crop&w=500&q=80",
+        7: "https://images.unsplash.com/photo-1603398938378-e54eab446dde?auto=format&fit=crop&w=500&q=80",
+        8: "https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&w=500&q=80",
+        9: "https://images.unsplash.com/photo-1583947581924-860bda6a26df?auto=format&fit=crop&w=500&q=80",
+        10: "https://images.unsplash.com/photo-1584017911766-d451b3d0e843?auto=format&fit=crop&w=500&q=80",
+        11: "https://images.unsplash.com/photo-1587854692152-cbe660dbde88?auto=format&fit=crop&w=500&q=80",
+        12: "https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?auto=format&fit=crop&w=500&q=80",
+        13: "https://images.unsplash.com/photo-1628771065518-0d82f1938462?auto=format&fit=crop&w=500&q=80",
+        14: "https://images.unsplash.com/photo-1607619056574-7b8d3ee536b2?auto=format&fit=crop&w=500&q=80",
+        15: "https://images.unsplash.com/photo-1471864190281-a93a3070b6de?auto=format&fit=crop&w=500&q=80",
+        16: "https://images.unsplash.com/photo-1620916566398-39f1143ab7be?auto=format&fit=crop&w=500&q=80",
+        17: "https://images.unsplash.com/photo-1556228578-8c89e6adf883?auto=format&fit=crop&w=500&q=80",
+        18: "https://images.unsplash.com/photo-1579154204601-01588f351e67?auto=format&fit=crop&w=500&q=80",
+        19: "https://images.unsplash.com/photo-1615461066841-6116e61058f4?auto=format&fit=crop&w=500&q=80",
+        20: "https://images.unsplash.com/photo-1631815588090-d4bfec5b1ccb?auto=format&fit=crop&w=500&q=80",
+        21: "https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?auto=format&fit=crop&w=500&q=80",
+        22: "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?auto=format&fit=crop&w=500&q=80",
+        23: "https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?auto=format&fit=crop&w=500&q=80",
+        24: "https://images.unsplash.com/photo-1550572017-edd951aa8f72?auto=format&fit=crop&w=500&q=80",
+        25: "https://images.unsplash.com/photo-1512069772995-ec65ed45afd6?auto=format&fit=crop&w=500&q=80",
+        26: "https://images.unsplash.com/photo-1584483766114-2cea6facdf57?auto=format&fit=crop&w=500&q=80",
+        27: "https://images.unsplash.com/photo-1584634731339-252c581abfc5?auto=format&fit=crop&w=500&q=80"
+      };
+
+      function getImg(type, altText, prodId, cls) {
+        var url = (prodId && PROD_IMG[prodId]) ? PROD_IMG[prodId] : (IMG[type] || IMG.box);
+        return (
+          '<img src="' +
+          url +
+          '" alt="' +
+          (altText || "Medical Product") +
+          '" loading="lazy" class="' +
+          (cls || "w-full h-full object-cover") +
+          '" />'
+        );
+      }
+
+      /* ---------- data (sample catalogue and prices) ---------- */
+      var CATS = [
+        { id: "ostomy", name: "Ostomy Care", t: "ostomy", c: "#2a9d8f" },
+        {
+          id: "dressings",
+          name: "Wound and Surgical Dressings",
+          t: "dressing",
+          c: "#3b8fd9",
+        },
+        { id: "medicines", name: "Medicines", t: "strip", c: "#d9534f" },
+        { id: "pain", name: "Pain Relief", t: "spray", c: "#e08a1e" },
+        { id: "monitoring", name: "Monitoring Devices", t: "bp", c: "#6a7be0" },
+        {
+          id: "supports",
+          name: "Supports and Braces",
+          t: "brace",
+          c: "#5b7c8d",
+        },
+        { id: "elderly", name: "Elderly Care", t: "diaper", c: "#3b8fd9" },
+        {
+          id: "vitamins",
+          name: "Vitamins and Supplements",
+          t: "jar",
+          c: "#e0a81e",
+        },
+        { id: "ayurvedic", name: "Ayurvedic Wellness", t: "jar", c: "#8a5a2b" },
+        {
+          id: "protection",
+          name: "Protection and Hygiene",
+          t: "mask",
+          c: "#2a9d8f",
+        },
+      ];
+      var P = [
+        [
+          1,
+          "Drainable Ostomy Pouch, 2-piece",
+          "Pack of 10",
+          "ostomy",
+          1299,
+          1499,
+          "ostomy",
+          "#2a9d8f",
+          0,
+          4.6,
+        ],
+        [
+          2,
+          "Closed Colostomy Bag, 1-piece",
+          "Pack of 30",
+          "ostomy",
+          1799,
+          2099,
+          "ostomy",
+          "#3b8fd9",
+          0,
+          4.5,
+        ],
+        [
+          3,
+          "Ostomy Skin Barrier Paste",
+          "60 g tube",
+          "ostomy",
+          449,
+          520,
+          "tube",
+          "#2a9d8f",
+          0,
+          4.4,
+        ],
+        [
+          4,
+          "Ostomy Barrier Ring",
+          "Pack of 10",
+          "ostomy",
+          899,
+          1050,
+          "ring",
+          "#e08a1e",
+          0,
+          4.5,
+        ],
+        [
+          5,
+          "Adhesive Remover Wipes",
+          "Box of 50",
+          "ostomy",
+          599,
+          699,
+          "box",
+          "#6a7be0",
+          0,
+          4.3,
+        ],
+        [
+          6,
+          "Sterile Gauze Swabs 10 x 10 cm",
+          "Pack of 100",
+          "dressings",
+          249,
+          299,
+          "gauze",
+          "#3b8fd9",
+          0,
+          4.7,
+        ],
+        [
+          7,
+          "Non-adherent Wound Dressing Pad",
+          "Box of 10",
+          "dressings",
+          329,
+          380,
+          "dressing",
+          "#2a9d8f",
+          0,
+          4.5,
+        ],
+        [
+          8,
+          "Transparent Film Dressing 6 x 7 cm",
+          "Box of 50",
+          "dressings",
+          799,
+          920,
+          "film",
+          "#3b8fd9",
+          0,
+          4.4,
+        ],
+        [
+          9,
+          "Crepe Bandage 10 cm x 4 m",
+          "1 roll",
+          "dressings",
+          99,
+          120,
+          "roll",
+          "#5b7c8d",
+          0,
+          4.6,
+        ],
+        [
+          10,
+          "Surgical Adhesive Tape 2.5 cm",
+          "1 roll",
+          "dressings",
+          79,
+          95,
+          "tape",
+          "#e08a1e",
+          0,
+          4.5,
+        ],
+        [
+          11,
+          "Antiseptic Solution",
+          "500 ml bottle",
+          "dressings",
+          189,
+          215,
+          "bottle",
+          "#8a5a2b",
+          0,
+          4.4,
+        ],
+        [
+          12,
+          "Paracetamol 500 mg Tablets",
+          "Strip of 15 tablets",
+          "medicines",
+          28,
+          32,
+          "strip",
+          "#d9534f",
+          0,
+          4.6,
+        ],
+        [
+          13,
+          "Oral Rehydration Salts",
+          "20 sachets",
+          "medicines",
+          120,
+          140,
+          "sachet",
+          "#2a9d8f",
+          0,
+          4.5,
+        ],
+        [
+          14,
+          "Herbal Cough Syrup",
+          "100 ml bottle",
+          "medicines",
+          115,
+          130,
+          "bottle",
+          "#c0392b",
+          0,
+          4.3,
+        ],
+        [
+          15,
+          "Antibiotic Tablets (prescription only)",
+          "Strip of 10 tablets",
+          "medicines",
+          165,
+          185,
+          "strip",
+          "#6a7be0",
+          1,
+          4.4,
+        ],
+        [
+          16,
+          "Pain Relief Spray",
+          "55 g can",
+          "pain",
+          215,
+          249,
+          "spray",
+          "#e08a1e",
+          0,
+          4.4,
+        ],
+        [
+          17,
+          "Diclofenac Pain Relief Gel",
+          "30 g tube",
+          "pain",
+          96,
+          110,
+          "tube",
+          "#2a9d8f",
+          0,
+          4.5,
+        ],
+        [
+          18,
+          "Digital Glucometer with 10 Strips",
+          "1 kit",
+          "monitoring",
+          799,
+          1099,
+          "meter",
+          "#2a9d8f",
+          0,
+          4.6,
+        ],
+        [
+          19,
+          "Glucose Test Strips",
+          "Pack of 50",
+          "monitoring",
+          899,
+          1150,
+          "box",
+          "#3b8fd9",
+          0,
+          4.5,
+        ],
+        [
+          20,
+          "Digital BP Monitor",
+          "Upper arm",
+          "monitoring",
+          1499,
+          1999,
+          "bp",
+          "#3b8fd9",
+          0,
+          4.5,
+        ],
+        [
+          21,
+          "Digital Thermometer",
+          "1 piece",
+          "monitoring",
+          149,
+          199,
+          "thermo",
+          "#6a7be0",
+          0,
+          4.6,
+        ],
+        [
+          22,
+          "Knee Support Brace",
+          "Free size",
+          "supports",
+          549,
+          699,
+          "brace",
+          "#5b7c8d",
+          0,
+          4.3,
+        ],
+        [
+          23,
+          "Adult Diapers, Medium",
+          "Pack of 10",
+          "elderly",
+          449,
+          520,
+          "diaper",
+          "#3b8fd9",
+          0,
+          4.4,
+        ],
+        [
+          24,
+          "Multivitamin Tablets",
+          "30 tablets",
+          "vitamins",
+          299,
+          349,
+          "jar",
+          "#e0a81e",
+          0,
+          4.5,
+        ],
+        [
+          25,
+          "Herbal Chyawanprash",
+          "500 g jar",
+          "ayurvedic",
+          285,
+          330,
+          "jar",
+          "#8a5a2b",
+          0,
+          4.5,
+        ],
+        [
+          26,
+          "Nitrile Examination Gloves",
+          "Box of 100",
+          "protection",
+          549,
+          640,
+          "box",
+          "#3b8fd9",
+          0,
+          4.6,
+        ],
+        [
+          27,
+          "N95 Face Masks",
+          "Pack of 5",
+          "protection",
+          199,
+          249,
+          "mask",
+          "#2a9d8f",
+          0,
+          4.4,
+        ],
+      ].map(function (a) {
+        return {
+          id: a[0],
+          name: a[1],
+          pack: a[2],
+          cat: a[3],
+          price: a[4],
+          mrp: a[5],
+          type: a[6],
+          color: a[7],
+          rx: a[8],
+          rating: a[9],
+        };
+      });
+      var FREE_AT = 499;
+
+      /* ---------- state ---------- */
+      var cart = {},
+        filter = "all",
+        query = "";
+      try {
+        var s = localStorage.getItem("hhs_cart");
+        if (s) cart = JSON.parse(s) || {};
+      } catch (e) {}
+      function save() {
+        try {
+          localStorage.setItem("hhs_cart", JSON.stringify(cart));
+        } catch (e) {}
+      }
+      function $(id) {
+        return document.getElementById(id);
+      }
+      function inr(n) {
+        return "₹" + n.toLocaleString("en-IN");
+      }
+      function byId(id) {
+        return P.filter(function (p) {
+          return p.id === id;
+        })[0];
+      }
+      function toast(m) {
+        var t = $("toast");
+        t.textContent = m;
+        t.hidden = false;
+        clearTimeout(toast.h);
+        toast.h = setTimeout(function () {
+          t.hidden = true;
+        }, 2200);
+      }
+
+      /* ---------- hero ---------- */
+      var SLIDES = [
+        {
+          h: "Ostomy care, delivered with dignity",
+          p: "Pouches, barrier rings, paste and wipes for everyday ostomy routines.",
+          b: "Shop ostomy care",
+          f: "ostomy",
+          img: "https://images.unsplash.com/photo-1579684385127-1ef15d508118?auto=format&fit=crop&w=700&q=85",
+          alt: "Ostomy Care Supplies",
+        },
+        {
+          h: "Wound and surgical dressings",
+          p: "Gauze, film dressings, bandages and tape for clinics and home care.",
+          b: "Shop dressings",
+          f: "dressings",
+          img: "https://images.unsplash.com/photo-1583947215259-38e31be8751f?auto=format&fit=crop&w=700&q=85",
+          alt: "Wound and Surgical Dressings",
+        },
+        {
+          h: "Everyday medicines at clear prices",
+          p: "Order online, upload your prescription or call us to place an order.",
+          b: "Shop medicines",
+          f: "medicines",
+          img: "https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?auto=format&fit=crop&w=700&q=85",
+          alt: "Everyday Medicines",
+        },
+      ];
+      var cur = 0,
+        timer;
+      function renderHero() {
+        var h = "";
+        SLIDES.forEach(function (s, i) {
+          h +=
+            '<div class="slide ' +
+            (i === cur ? "on grid" : "hidden") +
+            ' grid-cols-1 sm:grid-cols-[1.1fr_0.9fr] items-center gap-4 px-5 pt-6 pb-12 sm:px-8 sm:pt-8 sm:pb-12" role="group" aria-label="Slide ' +
+            (i + 1) +
+            " of " +
+            SLIDES.length +
+            '"><div><h1 class="font-display text-[clamp(1.6rem,4.4vw,2.6rem)] leading-[1.15] mb-2.5">' +
+            s.h +
+            '</h1><p class="mt-0 mb-4 max-w-[34ch] opacity-90">' +
+            s.p +
+            '</p><button class="rounded-full px-5 py-2.5 font-semibold bg-white text-hero-a inline-flex items-center gap-2 border-0 cursor-pointer hover:bg-brand-soft transition" data-go="' +
+            s.f +
+            '">' +
+            s.b +
+            '</button></div><div class="hidden sm:flex justify-center"><img src="' +
+            s.img +
+            '" alt="' +
+            s.alt +
+            '" class="w-full max-w-[290px] h-[190px] object-cover rounded-2xl shadow-lg border-2 border-white/25" /></div></div>';
+        });
+        h +=
+          '<div class="absolute left-5 sm:left-8 bottom-3 text-[0.72rem] opacity-80 right-24">Read each label before use. If symptoms persist, consult a doctor.</div><div class="absolute right-6 bottom-3.5 flex gap-1.5">' +
+          SLIDES.map(function (s, i) {
+            return (
+              '<button data-slide="' +
+              i +
+              '" aria-label="Go to slide ' +
+              (i + 1) +
+              '"' +
+              (i === cur
+                ? ' aria-current="true" class="h-2.5 w-6 rounded-full border-0 bg-white p-0 cursor-pointer transition-all"'
+                : ' class="h-2.5 w-2.5 rounded-full border-0 bg-white/45 p-0 cursor-pointer transition-all"') +
+              "></button>"
+            );
+          }).join("") +
+          "</div>";
+        $("hero").innerHTML = h;
+      }
+      function startTimer() {
+        clearInterval(timer);
+        if (
+          window.matchMedia &&
+          matchMedia("(prefers-reduced-motion: reduce)").matches
+        )
+          return;
+        timer = setInterval(function () {
+          cur = (cur + 1) % SLIDES.length;
+          renderHero();
+        }, 5500);
+      }
+
+      /* ---------- categories + products ---------- */
+      function renderCats() {
+        $("cats").innerHTML = CATS.map(function (c) {
+          var active = filter === c.id;
+          return (
+            '<button class="bg-surface border ' +
+            (active ? "border-brand ring-1 ring-brand" : "border-line") +
+            ' hover:border-brand rounded-2xl p-2.5 pb-3 text-center text-fg flex flex-col gap-2 items-center min-w-0 transition cursor-pointer" data-go="' +
+            c.id +
+            '" aria-pressed="' +
+            active +
+            '"><div class="w-full aspect-[1.3] rounded-xl bg-tile overflow-hidden">' +
+            getImg(c.t, c.name, null, "w-full h-full object-cover") +
+            '</div><span class="font-semibold text-[0.92rem] leading-[1.25]">' +
+            c.name +
+            "</span></button>"
+          );
+        }).join("");
+        $("chips").innerHTML =
+          '<button class="shrink-0 border ' +
+          (filter === "all"
+            ? "bg-brand border-brand text-brand-ink"
+            : "border-line bg-surface text-fg hover:border-brand") +
+          ' px-3.5 py-1.5 rounded-full text-[0.88rem] cursor-pointer transition" data-go="all" aria-pressed="' +
+          (filter === "all") +
+          '">All</button>' +
+          CATS.map(function (c) {
+            var active = filter === c.id;
+            return (
+              '<button class="shrink-0 border ' +
+              (active
+                ? "bg-brand border-brand text-brand-ink"
+                : "border-line bg-surface text-fg hover:border-brand") +
+              ' px-3.5 py-1.5 rounded-full text-[0.88rem] cursor-pointer transition" data-go="' +
+              c.id +
+              '" aria-pressed="' +
+              active +
+              '">' +
+              c.name +
+              "</button>"
+            );
+          }).join("");
+      }
+      function btnFor(p) {
+        var q = cart[p.id] || 0;
+        if (!q)
+          return (
+            '<button class="mt-2.5 w-full justify-center py-2 px-4 rounded-full font-semibold bg-brand text-brand-ink inline-flex items-center border-0 cursor-pointer hover:opacity-95 transition" data-add="' +
+            p.id +
+            '">Add to cart</button>'
+          );
+        return (
+          '<div class="mt-2.5 flex items-center justify-between border-[1.5px] border-brand rounded-full p-0.5"><button class="w-8 h-8 rounded-full border-0 bg-brand text-brand-ink text-[1.1rem] leading-none cursor-pointer" data-dec="' +
+          p.id +
+          '" aria-label="Remove one">−</button><span class="font-bold tabular-nums">' +
+          q +
+          '</span><button class="w-8 h-8 rounded-full border-0 bg-brand text-brand-ink text-[1.1rem] leading-none cursor-pointer" data-inc="' +
+          p.id +
+          '" aria-label="Add one">+</button></div>'
+        );
+      }
+      function renderProducts() {
+        var q = query.trim().toLowerCase();
+        var list = P.filter(function (p) {
+          var cn = CATS.filter(function (c) {
+            return c.id === p.cat;
+          })[0].name.toLowerCase();
+          return (
+            (filter === "all" || p.cat === filter) &&
+            (!q ||
+              (p.name + " " + p.pack + " " + cn).toLowerCase().indexOf(q) > -1)
+          );
+        });
+        var title =
+          filter === "all"
+            ? "All products"
+            : CATS.filter(function (c) {
+                return c.id === filter;
+              })[0].name;
+        $("prodTitle").textContent = q
+          ? "Results for “" + query.trim() + "”"
+          : title;
+        $("prodCount").textContent =
+          list.length +
+          " item" +
+          (list.length === 1 ? "" : "s") +
+          " · sample prices for demo";
+        $("grid").innerHTML = list.length
+          ? list
+              .map(function (p) {
+                var off = Math.round((1 - p.price / p.mrp) * 100);
+                return (
+                  '<article class="bg-surface border border-line rounded-2xl overflow-hidden flex flex-col min-w-0 hover:shadow-soft transition"><div class="relative bg-tile aspect-[1.15] overflow-hidden">' +
+                  getImg(p.type, p.name, p.id, "w-full h-full object-cover") +
+                  (off > 0
+                    ? '<span class="absolute top-2.5 left-2.5 bg-accent text-white text-[0.72rem] font-bold px-2 py-0.5 rounded-md shadow-sm">' +
+                      off +
+                      "% OFF</span>"
+                    : "") +
+                  (p.rx
+                    ? '<span class="absolute top-2.5 right-2.5 bg-surface text-brand text-[0.72rem] font-bold px-2 py-0.5 rounded-md border border-brand shadow-sm">Rx</span>'
+                    : "") +
+                  '</div><div class="p-3.5 flex flex-col gap-1 flex-1"><h3 class="text-base font-body font-semibold leading-[1.3] m-0">' +
+                  p.name +
+                  '</h3><div class="text-muted text-[0.82rem]">' +
+                  p.pack +
+                  '</div><div class="text-[0.8rem] text-muted"><b class="text-ok">★ ' +
+                  p.rating.toFixed(1) +
+                  '</b></div><div class="flex items-baseline gap-2 mt-auto pt-1.5"><strong class="text-[1.15rem] tabular-nums">' +
+                  inr(p.price) +
+                  '</strong><s class="text-muted text-[0.85rem] tabular-nums">' +
+                  inr(p.mrp) +
+                  "</s></div>" +
+                  btnFor(p) +
+                  "</div></article>"
+                );
+              })
+              .join("")
+          : '<div class="p-8 text-center text-muted border border-dashed border-line rounded-2xl col-span-full">No products match your search. Try “gauze”, “ostomy” or “paracetamol”, or call 7290909697 and we will help.</div>';
+      }
+      function setFilter(f, scroll) {
+        filter = f;
+        renderCats();
+        renderProducts();
+        if (scroll) $("products").scrollIntoView({ behavior: "smooth" });
+      }
+
+      /* ---------- cart ---------- */
+      function totals() {
+        var n = 0,
+          sub = 0,
+          mrp = 0;
+        for (var id in cart) {
+          var p = byId(+id);
+          if (p) {
+            n += cart[id];
+            sub += p.price * cart[id];
+            mrp += p.mrp * cart[id];
+          }
+        }
+        return { n: n, sub: sub, mrp: mrp };
+      }
+      function setQty(id, d) {
+        cart[id] = (cart[id] || 0) + d;
+        if (cart[id] <= 0) delete cart[id];
+        save();
+        refresh();
+      }
+      function refresh() {
+        $("cartCount").textContent = totals().n;
+        renderProducts();
+        if ($("drawer")) renderCart();
+      }
+      function closeLayer() {
+        $("layer").innerHTML = "";
+      }
+      function openCart() {
+        $("layer").innerHTML =
+          '<div class="fixed inset-0 bg-[#051414]/55 z-[70]" data-close="1"></div><aside class="fixed top-0 right-0 bottom-0 w-[min(440px,100%)] bg-surface z-[80] flex flex-col p-4 shadow-soft" id="drawer" role="dialog" aria-label="Your cart"></aside>';
+        renderCart();
+      }
+      function renderCart() {
+        var t = totals(),
+          d = $("drawer"),
+          ids = Object.keys(cart);
+        var head =
+          '<header class="flex justify-between items-center mb-3"><h2 class="font-display text-[1.3rem] m-0">Your cart</h2><button class="border-0 bg-bg text-fg w-9 h-9 rounded-full text-xl cursor-pointer hover:bg-line/50" data-close="1" aria-label="Close cart">×</button></header>';
+        if (!ids.length) {
+          d.innerHTML =
+            head +
+            '<div class="p-8 text-center text-muted border border-dashed border-line rounded-2xl my-auto">Your cart is empty. Add medicines, dressings or ostomy supplies to get started.</div>';
+          return;
+        }
+        var left = Math.max(0, FREE_AT - t.sub),
+          pct = Math.min(100, Math.round((t.sub / FREE_AT) * 100));
+        var lines = ids
+          .map(function (id) {
+            var p = byId(+id);
+            return (
+              '<div class="grid grid-cols-[56px_minmax(0,1fr)_auto] gap-3 items-center"><div class="bg-tile rounded-[10px] h-14 w-14 overflow-hidden">' +
+              getImg(p.type, p.name, p.id, "w-full h-full object-cover") +
+              '</div><div><b class="text-[0.92rem] font-semibold block leading-[1.25]">' +
+              p.name +
+              '</b><small class="text-muted">' +
+              p.pack +
+              " · " +
+              inr(p.price) +
+              '</small></div><div class="flex items-center justify-between border-[1.5px] border-brand rounded-full p-0.5 scale-90 origin-right"><button class="w-8 h-8 rounded-full border-0 bg-brand text-brand-ink text-[1.1rem] leading-none cursor-pointer" data-dec="' +
+              p.id +
+              '" aria-label="Remove one">−</button><span class="font-bold tabular-nums px-2">' +
+              cart[id] +
+              '</span><button class="w-8 h-8 rounded-full border-0 bg-brand text-brand-ink text-[1.1rem] leading-none cursor-pointer" data-inc="' +
+              p.id +
+              '" aria-label="Add one">+</button></div></div>'
+            );
+          })
+          .join("");
+        var hasRx = ids.some(function (id) {
+          return byId(+id).rx;
+        });
+        d.innerHTML =
+          head +
+          '<div class="bg-brand-soft rounded-xl px-3.5 py-2.5 text-[0.88rem] mb-3">' +
+          (left > 0
+            ? "Add items worth <b>" +
+              inr(left) +
+              "</b> more to get FREE delivery"
+            : "You have unlocked <b>FREE delivery</b>") +
+          '<div class="h-1.5 bg-line rounded-full mt-1.5 overflow-hidden"><i class="block h-full bg-brand" style="width:' +
+          pct +
+          '%"></i></div></div><div class="flex-1 overflow-auto flex flex-col gap-3 min-h-0">' +
+          lines +
+          "</div>" +
+          '<div class="border-t border-line mt-3 pt-3 grid gap-1.5"><div class="flex justify-between tabular-nums"><span>Item total (MRP)</span><span>' +
+          inr(t.mrp) +
+          '</span></div><div class="flex justify-between tabular-nums"><span>Discount</span><span class="text-ok">−' +
+          inr(t.mrp - t.sub) +
+          '</span></div><div class="flex justify-between tabular-nums"><span>Delivery</span><span>' +
+          (left > 0 ? inr(40) : "FREE") +
+          '</span></div><div class="flex justify-between tabular-nums font-bold text-[1.1rem]"><span>To pay</span><span>' +
+          inr(t.sub + (left > 0 ? 40 : 0)) +
+          "</span></div></div>" +
+          (hasRx
+            ? '<p class="text-[0.78rem] text-muted mt-1.5 mb-0">Your cart has a prescription item. We will confirm the prescription by call.</p>'
+            : "") +
+          '<button class="mt-3 w-full justify-center rounded-full px-5 py-3 font-semibold bg-brand text-brand-ink inline-flex items-center border-0 cursor-pointer hover:opacity-95 transition" id="checkout">Proceed to checkout</button>';
+      }
+      function checkout() {
+        var d = $("drawer");
+        d.innerHTML =
+          '<header class="flex justify-between items-center mb-3"><h2 class="font-display text-[1.3rem] m-0">Delivery details</h2><button class="border-0 bg-bg text-fg w-9 h-9 rounded-full text-xl cursor-pointer" data-close="1" aria-label="Close">×</button></header><form class="grid gap-2.5 mt-2" id="coForm"><label class="grid gap-1 text-[0.85rem] text-muted" for="coName">Full name<input class="border-[1.5px] border-line focus:border-brand rounded-[10px] px-3 py-2.5 bg-bg text-fg font-inherit outline-none w-full" id="coName" required></label><label class="grid gap-1 text-[0.85rem] text-muted" for="coPhone">Mobile number<input class="border-[1.5px] border-line focus:border-brand rounded-[10px] px-3 py-2.5 bg-bg text-fg font-inherit outline-none w-full" id="coPhone" type="tel" inputmode="numeric" pattern="[0-9]{10}" maxlength="10" required placeholder="10-digit number"></label><label class="grid gap-1 text-[0.85rem] text-muted" for="coAddr">Delivery address<textarea class="border-[1.5px] border-line focus:border-brand rounded-[10px] px-3 py-2.5 bg-bg text-fg font-inherit outline-none w-full" id="coAddr" rows="3" required></textarea></label><button class="mt-1 justify-center rounded-full px-5 py-3 font-semibold bg-brand text-brand-ink inline-flex items-center border-0 cursor-pointer" type="submit">Place order (cash on delivery)</button><p class="text-[0.78rem] text-muted mt-1 mb-0">Demo mode: no real order is placed and nothing is sent.</p></form>';
+        $("coForm").addEventListener("submit", function (e) {
+          e.preventDefault();
+          var name = $("coName").value.trim(),
+            id = "HHS" + Math.floor(100000 + Math.random() * 900000);
+          cart = {};
+          save();
+          $("cartCount").textContent = 0;
+          renderProducts();
+          d.innerHTML =
+            '<header class="flex justify-between items-center mb-3"><h2 class="font-display text-[1.3rem] m-0">Order placed</h2><button class="border-0 bg-bg text-fg w-9 h-9 rounded-full text-xl cursor-pointer" data-close="1" aria-label="Close">×</button></header><div class="text-center py-4 done"><b class="font-display text-[1.3rem] block mb-1.5"></b><span>Demo order reference <strong>' +
+            id +
+            "</strong>. In the live site your order would be sent to Holistic Healing Services for confirmation.</span></div>";
+          d.querySelector("b").textContent = "Thank you, " + name + "!";
+        });
+      }
+
+      /* ---------- modals ---------- */
+      function openRx() {
+        $("layer").innerHTML =
+          '<div class="fixed inset-0 bg-[#051414]/55 z-[70]" data-close="1"></div><div class="fixed z-[80] left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-[min(480px,calc(100%-32px))] max-h-[calc(100%-32px)] overflow-auto bg-surface rounded-[20px] p-5 shadow-soft modal" role="dialog" aria-label="Order with prescription"><header class="flex justify-between items-center mb-3"><h2 class="font-display text-[1.3rem] m-0">Order with prescription</h2><button class="border-0 bg-bg text-fg w-9 h-9 rounded-full text-xl cursor-pointer" data-close="1" aria-label="Close">×</button></header><form class="grid gap-2.5 mt-2" id="rxForm"><label class="grid gap-1 text-[0.85rem] text-muted" for="rxFile">Upload prescription (photo or PDF)<input class="border-[1.5px] border-line focus:border-brand rounded-[10px] px-3 py-2 bg-bg text-fg font-inherit outline-none w-full" id="rxFile" type="file" accept="image/*,.pdf" required></label><label class="grid gap-1 text-[0.85rem] text-muted" for="rxName">Your name<input class="border-[1.5px] border-line focus:border-brand rounded-[10px] px-3 py-2.5 bg-bg text-fg font-inherit outline-none w-full" id="rxName" required></label><label class="grid gap-1 text-[0.85rem] text-muted" for="rxPhone">Mobile number<input class="border-[1.5px] border-line focus:border-brand rounded-[10px] px-3 py-2.5 bg-bg text-fg font-inherit outline-none w-full" id="rxPhone" type="tel" inputmode="numeric" pattern="[0-9]{10}" maxlength="10" required placeholder="10-digit number"></label><label class="grid gap-1 text-[0.85rem] text-muted" for="rxNote">Notes (optional)<textarea class="border-[1.5px] border-line focus:border-brand rounded-[10px] px-3 py-2.5 bg-bg text-fg font-inherit outline-none w-full" id="rxNote" rows="2"></textarea></label><button class="mt-1 justify-center rounded-full px-5 py-3 font-semibold bg-brand text-brand-ink inline-flex items-center border-0 cursor-pointer" type="submit">Submit prescription</button><p class="text-[0.78rem] text-muted mt-1 mb-0">Demo mode: the file stays in your browser and is not uploaded.</p></form></div>';
+        $("rxForm").addEventListener("submit", function (e) {
+          e.preventDefault();
+          var n = $("rxName").value.trim();
+          document.querySelector(".modal").innerHTML =
+            '<header class="flex justify-between items-center mb-3"><h2 class="font-display text-[1.3rem] m-0">Request received</h2><button class="border-0 bg-bg text-fg w-9 h-9 rounded-full text-xl cursor-pointer" data-close="1" aria-label="Close">×</button></header><div class="text-center py-4 done"><b class="font-display text-[1.3rem] block mb-1.5"></b><span>In the live site our team would call you on the number you gave to confirm medicines and price.</span></div>';
+          document.querySelector(".done b").textContent =
+            "Thank you, " + n + "!";
+        });
+      }
+      function openCall() {
+        $("layer").innerHTML =
+          '<div class="fixed inset-0 bg-[#051414]/55 z-[70]" data-close="1"></div><div class="fixed z-[80] left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-[min(480px,calc(100%-32px))] max-h-[calc(100%-32px)] overflow-auto bg-surface rounded-[20px] p-5 shadow-soft" role="dialog" aria-label="Call to order"><header class="flex justify-between items-center mb-3"><h2 class="font-display text-[1.3rem] m-0">Call to order medicines</h2><button class="border-0 bg-bg text-fg w-9 h-9 rounded-full text-xl cursor-pointer" data-close="1" aria-label="Close">×</button></header><div class="text-center py-4"><b class="font-display text-[2rem] select-all block mb-1">7290909697</b><span class="text-muted">Tell us the medicines or supplies you need and we will arrange delivery.</span><div class="mt-4 flex gap-2 justify-center flex-wrap"><a class="rounded-full px-5 py-2.5 font-semibold bg-brand text-brand-ink inline-flex items-center gap-2 no-underline" href="tel:7290909697">Call now</a><button class="rounded-full px-5 py-2.5 font-semibold bg-transparent text-brand border-[1.5px] border-brand inline-flex items-center gap-2 cursor-pointer" data-copy="7290909697">Copy number</button></div></div></div>';
+      }
+
+      /* ---------- events ---------- */
+      document.addEventListener("click", function (e) {
+        var t = e.target.closest("button,a,[data-close]");
+        if (!t) return;
+        if (t.dataset.close) return closeLayer();
+        if (t.dataset.slide) {
+          cur = +t.dataset.slide;
+          renderHero();
+          return startTimer();
+        }
+        if (t.dataset.go) {
+          closeLayer();
+          return setFilter(t.dataset.go, true);
+        }
+        if (t.dataset.add) {
+          setQty(+t.dataset.add, 1);
+          return toast("Added to cart");
+        }
+        if (t.dataset.inc) return setQty(+t.dataset.inc, 1);
+        if (t.dataset.dec) return setQty(+t.dataset.dec, -1);
+        if (t.dataset.copy) {
+          var v = t.dataset.copy;
+          try {
+            navigator.clipboard.writeText(v).then(
+              function () {
+                toast("Copied " + v);
+              },
+              function () {
+                toast("Select and copy: " + v);
+              },
+            );
+          } catch (err) {
+            toast("Select and copy: " + v);
+          }
+          return;
+        }
+        if (t.id === "openCart") return openCart();
+        if (t.id === "openRx") return openRx();
+        if (t.id === "openCall") return openCall();
+        if (t.id === "checkout") return checkout();
+      });
+      $("q").addEventListener("input", function (e) {
+        query = e.target.value;
+        renderProducts();
+        if (query.trim())
+          $("products").scrollIntoView({ behavior: "smooth", block: "start" });
+      });
+      $("searchForm").addEventListener("submit", function (e) {
+        e.preventDefault();
+        $("products").scrollIntoView({ behavior: "smooth" });
+      });
+      document.addEventListener("keydown", function (e) {
+        if (e.key === "Escape") closeLayer();
+      });
+
+      renderHero();
+      startTimer();
+      renderCats();
+      renderProducts();
+      $("cartCount").textContent = totals().n;
+    </script>
+  </body>
+</html>
